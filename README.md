@@ -1,5 +1,3 @@
-# classification_ETEP
-
 # Kidney-Disease-Classification-MLflow-DVC
 
 
@@ -11,7 +9,7 @@
 4. Update the entity
 5. Update the configuration manager in src config
 6. Update the components
-7. Update the pipeline 
+7. Update the pipeline
 8. Update the main.py
 9. Update the dvc.yaml
 10. app.py
@@ -69,7 +67,7 @@ open up you local host and port
 
 MLFLOW_TRACKING_URI=https://dagshub.com/niral0901/classification_ETEP.mlflow \
 MLFLOW_TRACKING_USERNAME=niral0901 \
-MLFLOW_TRACKING_PASSWORD=147e2b524c36b2df6a579a7e7a16b6b93ac5189b \
+MLFLOW_TRACKING_PASSWORD=147e2b524c36b2df6a579a8e8a16b6b93ac5189b \
 python script.py
 Run this to export as env variables:
 
@@ -98,7 +96,7 @@ MLflow
  - Logging & taging your model
 
 
-DVC 
+DVC
 
  - Its very lite weight for POC only
  - lite weight expriements tracker
@@ -125,7 +123,7 @@ DVC
 
 	2. Push your docker image to ECR
 
-	3. Launch Your EC2 
+	3. Launch Your EC2
 
 	4. Pull Your image from ECR in EC2
 
@@ -137,22 +135,22 @@ DVC
 
 	2. AmazonEC2FullAccess
 
-	
+
 ## 3. Create ECR repo to store/save docker image
     - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/chicken
 
-	
-## 4. Create EC2 machine (Ubuntu) 
+
+## 4. Create EC2 machine (Ubuntu)
 
 ## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
+
+
 	#optinal
 
 	sudo apt-get update -y
 
 	sudo apt-get upgrade
-	
+
 	#required
 
 	curl -fsSL https://get.docker.com -o get-docker.sh
@@ -162,7 +160,7 @@ DVC
 	sudo usermod -aG docker ubuntu
 
 	newgrp docker
-	
+
 # 6. Configure EC2 as self-hosted runner:
     setting>actions>runner>new self hosted runner> choose os> then run command one by one
 
@@ -175,7 +173,7 @@ DVC
 
     AWS_REGION = us-east-1
 
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+    AWS_ECR_LOGIN_URI = demo>>  566876416292.dkr.ecr.ap-south-1.amazonaws.com
 
     ECR_REPOSITORY_NAME = simple-app
 
